@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>S&P 500 Daily Report</title>
+        <link rel="stylesheet" type="text/css" href="SP500.css">
+    </head>
+    <body>
+        <div class="background">
+            <h1 class="header">S&P 500 Daily Report</h1>
+            {SP500}
+            <h1 class="bollinger">Bollinger Bands</h1>
+            {BB}
+            {active}
+            {gainers}
+            {losers}
+            <table class="technicals">
+                <thead>
+                    <tr>
+                        <th>52 Week Range</th>
+                        <th>Yesterday's Volume</th>
+                        <th>3 Month Average Volume</th>
+                        <th>Price to Earnings</th>
+                        <th>Price to Revenue</th>
+                        <th>Price to Book Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{range[0]} - {range[1]}</td>
+                        <td>{volume}</td>
+                        <td>{average_volume}</td>
+                        <td>{ratios[P2E]}</td>
+                        <td>{ratios[P2R]}</td>
+                        <td>{ratios[P2B]}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="recent">Recent Performance</h1>
+            <table class="performance">
+                <thead>
+                    <tr>
+                        <th>7 Days</th>
+                        <th>30 Days</th>
+                        <th>90 Days</th>
+                        <th>YTD</th>
+                        <th>1 Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{performance[7D]}</td>
+                        <td>{performance[30D]}</td>
+                        <td>{performance[90D]}</td>
+                        <td>{performance[YTD]}</td>
+                        <td>{performance[1Y]}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <img class="graph" src="SP500.png">
+        </div>
+    </body>
+</html>

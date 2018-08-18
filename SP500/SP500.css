@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Copperplate Gothic Regular';
+    src: url('Copperplate Gothic Regular.ttf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 8.5in;
+    height: 11in;
+    margin: auto;
+    border: none;
+    box-sizing: border-box;
+    background: url('background2.jpg');
+    background-repeat: no-repeat;
+    background-size: 8.5in 11in;
+}
+
+.background {
+    width: 8.5in;
+    height: 11in;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+}
+
+
+.header {
+    color: black;
+    border: solid 3px black;
+    font-family: "Copperplate Gothic Regular", sans-serif;
+    position: absolute;
+    width: 7.5in;
+    left: .35in;
+    top: .1in;
+    text-align: center;
+    margin: 0;
+    background-color: rgba(237, 27, 46, .7);
+}
+
+.graph {
+    position: absolute;
+    width: 5.05in;
+    height: 3.7in;
+    opacity: .8;
+    border: solid 3px black;
+    top: .65in;
+    right: .1in;
+    box-sizing: border-box;
+}
+
+#SP500 {
+    color: #000;
+    width: 3.1in;
+    font-family: 'Old Standard TT', sans-serif;
+    font-size: 19px;
+    text-align: center;
+    position: absolute;
+    top: .65in;
+    left: .1in;
+    border: solid 3px black;
+}
+
+.technicals {
+    text-align: center;
+    width: 8.3in;
+    height: 0.7in;
+    font-family: 'Old Standard TT', sans-serif;
+    border-spacing: 0 .0in;
+    font-size: 16px;
+    position: absolute;
+    border: solid 3px black;
+    top: 4.45in;
+    left: .1in;
+}
+
+.recent {
+    text-align: center;
+    width: 4.15in;
+    position: absolute;
+    right: 0in;
+    top: 5.4in;
+    font-family: 'Old Standard TT', sans-serif;
+}
+
+.performance {
+    text-align: center;
+    width: 4.15in;
+    height: .5in;
+    font-family: 'Old Standard TT', 'sans-serif';
+    font-size: 16px;
+    position: absolute;
+    border: solid 3px black;
+    top: 5.75in;
+    right: 0in;
+}
+
+.bollinger {
+    text-align: center;
+    width: 4.15in;
+    position: absolute;
+    right: 0in;
+    top: 6.3in;
+    font-family: 'Old Standard TT', sans-serif;
+}
+
+#BB {
+    text-align: center;
+    width: 4.15in;
+    height: .5in;
+    font-family: 'Old Standard TT', 'sans-serif';
+    font-size: 16px;
+    position: absolute;
+    border: solid 3px black;
+    top: 6.65in;
+    right: 0in;
+}
+
+.movers {
+    color: #000;
+    font-family: 'Old Standard TT', sans-serif;
+    text-align: center;
+    position: absolute;
+    border: solid 3px black;
+    height: 2.6in;
+    width: 4.15in;
+    font-size: 13px;
+}
+
+table tbody tr td:nth-child(odd) {
+    background: rgba(255, 255, 255, .5);
+}
+
+table tbody tr td:nth-child(even) {
+    background-color: rgba(200, 200, 200, .6);
+}
+
+table {
+    border-spacing: 0;
+}
+
+th {
+    background-color: rgba(237, 27, 46, .7);
+    text-align: center;
+    border-bottom: solid 3px black;
+}
+
+td {
+    font-family: 'Old Standard TT', sans-serif;
+}
+
+#active {
+    bottom: 2.9in;
+    left: .05in;
+}
+
+#gainers {
+    bottom: .15in;
+    left: .05in;
+}
+
+#losers {
+    bottom: .15in;
+    right: 0in;
+}
+
+.movers tbody tr td:nth-child(2) {
+    text-align: left;
+    font-size: 13px;
+    text-indent: 5px;
+}
