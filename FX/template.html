@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Daily Foreign Exchange Report</title>
+      <link rel="stylesheet" href="/home/daily_reports/FX/FX.css" type="text/css">
+    </head>
+    <body>
+      <div class="background">
+          <h1 class="header">Daily Foreign Exchange Report</h1>
+          {dataframe}
+          <h2 id="label">Bollinger Bands*</h2>
+          {bands}
+          <table id="key">
+            <thead>
+              <tr>
+                <th>Symbol</td>
+                <th>Currency</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>(EUR)</td>
+                <td>Euro</td>
+              </tr>
+              <tr>
+                <td>(GBP)</td>
+                <td>British Pound</td>
+              </tr>
+              <tr>
+                <td>(JPY)</td>
+                <td>Japanese Yen</td>
+              </tr>
+              <tr>
+                <td>(CNY)</td>
+                <td>Chinese Yuan</td>
+              </tr>
+              <tr>
+                <td>(INR)</td>
+                <td>Indian Rupee</td>
+              </tr>
+              <tr>
+                <td>(RUB)</td>
+                <td>Russian Ruble</td>
+              </tr>
+              <tr>
+                <td>(CHF)</td>
+                <td>Swiss Franc</td>
+              </tr>
+              <tr>
+                <td>(CAD)</td>
+                <td>Australian Dollar</td>
+              </tr>
+            </tbody>
+          </table>
+          <img id="developed" src="/home/daily_reports/FX/DevelopedEconomiesYTD.png">
+          <img id="emerging" src="/home/daily_reports/FX/EmergingEconomiesYTD.png">
+          <img id="trade-weighted-dollar" src="/home/daily_reports/FX/Trade Weighted Dollar.png">
+          <!--<p id="note">
+            Remeber that these quotes are relative to the dollar, so a currency weakens against the dollar when its spot price increases and strenghens against the dollar when its spot price decreases
+            <br>
+            *developed by famous technical trader John Bollinger; Bollinger Bands are calculated by 
+            taking the 21-day moving average of a security and adding and subtracting two standard deviations from the 
+            average for the upper and lower bound respectively.</p>-->
+      </div>
+    </body>
+        

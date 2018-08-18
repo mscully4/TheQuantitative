@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'Copperplate Gothic Regular';
+    src: url('Copperplate Gothic Regular.ttf')
+}
+
+
+html {
+    width: 11in;
+    height: 14.2in;
+    margin: auto;
+    background: url("/home/daily_reports/FX/world-currencies.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    margin: auto;
+}
+
+.header {
+    color: black;
+    border: solid 3px black;
+    font-family: "Copperplate Gothic Regular", sans-serif;
+    position: absolute;
+    width: 6in;
+    left: 2in;
+    top: .1in;
+    text-align: center;
+    background-color: rgba(174, 126, 153, .6);
+    margin: 0;
+}
+
+#timeseries {
+    color: #000;
+    width: 10in;
+    font-family: 'Old Standard TT', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: .60in;
+    left: .25in;
+    border-spacing: 0 .0in;
+    border: solid 3px black;
+    font-weight: bold
+}
+
+.dataframe th {
+    text-align: center;
+    background-color: rgba(174, 126, 153, .6);
+    border-bottom: solid black 3px;
+}
+
+.dataframe tbody tr td:nth-child(even) {
+    background: rgba(196, 185, 195, .8);
+}
+
+.dataframe tbody tr td:nth-child(odd) {
+    background-color: rgba(206, 160, 168, .8);
+}
+
+
+.dataframe tbody tr:last-child td{
+    border-top: solid 3px black;
+}
+
+img {
+    position: absolute;
+    border: solid 3px black;
+    height: 4.25in;
+    width: 6.1in;
+    opacity: .8;
+}
+
+#developed {
+    top: 4in;
+    left: .125in;
+}
+
+#emerging {
+    top: 8.5in;
+    left: .125in;
+}
+
+#trade-weighted-dollar {
+    position: absolute;
+    border: solid 3px black;
+    height: 3.5in;
+    width: 4.375in;
+    opacity: .8;
+    top: 7.85in;
+    left: 6.4in;
+}
+
+#label {
+    top: 4in;
+    color: black;
+    border: solid 3px black;
+    font-family: "Copperplate Gothic Light", sans-serif;
+    position: absolute;
+    width: 3in;
+    right: .75in;
+    text-align: center;
+    background-color: rgba(174, 126, 153, .6);
+    margin: 0;
+}
+
+#bands {
+    color: #000;
+    width: 4in;
+    font-family: 'Old Standard TT', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    border-spacing: 0 .0in;
+    border: solid 3px black;
+    font-weight: bold;
+    left: 6.4in;
+    top: 4.4in
+}
+
+#key {
+    color: #000;
+    width: 4in;
+    font-family: 'Old Standard TT', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    border-spacing: 0 .0in;
+    border: solid 3px black;
+    font-weight: bold;
+    left: 6.6in;
+    bottom: .125in;
+    text-align: center;
+    /*background-color: rgba(174, 126, 153, .6);*/
+}
+
+#key th {
+    text-align: center;
+    background-color: rgba(174, 126, 153, .6);
+    border-bottom: solid black 3px;
+}
+
+#key td {
+    background-color: rgba(206, 160, 168, .8);
+}
+
+#note {
+    color: #000;
+    font-family: 'Old Standard TT', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    width: 3.82in;
+    position: absolute;
+    bottom: 2.65in;
+    right: .2in;
+    background-color: rgba(174, 126, 153, .6);
+    border: solid black 3px;
+    padding: 0 .05in
+}

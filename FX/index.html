@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Daily Foreign Exchange Report</title>
+      <link rel="stylesheet" href="/home/daily_reports/FX/FX.css" type="text/css">
+    </head>
+    <body>
+      <div class="background">
+          <h1 class="header">Daily Foreign Exchange Report</h1>
+          <table border="0" class="dataframe" id="timeseries">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>(USD)</th>
+      <th>(EUR)</th>
+      <th>(GBP)</th>
+      <th>(JPY)</th>
+      <th>(CNY)</th>
+      <th>(INR)</th>
+      <th>(RUB)</th>
+      <th>(CHF)</th>
+      <th>(CAD)</th>
+      <th>(MXN)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>08/09/18</td>
+      <td>1.00</td>
+      <td>0.86</td>
+      <td>0.78</td>
+      <td>111.07</td>
+      <td>6.84</td>
+      <td>68.62</td>
+      <td>64.77</td>
+      <td>1.00</td>
+      <td>1.31</td>
+      <td>18.51</td>
+    </tr>
+    <tr>
+      <td>08/10/18</td>
+      <td>1.00</td>
+      <td>0.86</td>
+      <td>0.78</td>
+      <td>111.14</td>
+      <td>6.82</td>
+      <td>68.65</td>
+      <td>66.00</td>
+      <td>0.99</td>
+      <td>1.30</td>
+      <td>18.58</td>
+    </tr>
+    <tr>
+      <td>08/11/18</td>
+      <td>1.00</td>
+      <td>0.87</td>
+      <td>0.78</td>
+      <td>110.92</td>
+      <td>6.85</td>
+      <td>68.83</td>
+      <td>67.05</td>
+      <td>0.99</td>
+      <td>1.31</td>
+      <td>18.90</td>
+    </tr>
+    <tr>
+      <td>08/12/18</td>
+      <td>1.00</td>
+      <td>0.87</td>
+      <td>0.78</td>
+      <td>110.92</td>
+      <td>6.85</td>
+      <td>68.83</td>
+      <td>67.05</td>
+      <td>0.99</td>
+      <td>1.31</td>
+      <td>18.90</td>
+    </tr>
+    <tr>
+      <td>08/13/18</td>
+      <td>1.00</td>
+      <td>0.87</td>
+      <td>0.78</td>
+      <td>110.92</td>
+      <td>6.85</td>
+      <td>68.83</td>
+      <td>67.05</td>
+      <td>0.99</td>
+      <td>1.31</td>
+      <td>18.90</td>
+    </tr>
+    <tr>
+      <td>08/14/18</td>
+      <td>1.00</td>
+      <td>0.88</td>
+      <td>0.78</td>
+      <td>110.59</td>
+      <td>6.89</td>
+      <td>70.02</td>
+      <td>67.95</td>
+      <td>0.99</td>
+      <td>1.32</td>
+      <td>19.20</td>
+    </tr>
+    <tr>
+      <td>08/15/18</td>
+      <td>1.00</td>
+      <td>0.88</td>
+      <td>0.78</td>
+      <td>110.84</td>
+      <td>6.88</td>
+      <td>69.90</td>
+      <td>66.50</td>
+      <td>0.99</td>
+      <td>1.31</td>
+      <td>18.98</td>
+    </tr>
+    <tr>
+      <td>08/16/18</td>
+      <td>1.00</td>
+      <td>0.88</td>
+      <td>0.79</td>
+      <td>111.01</td>
+      <td>6.92</td>
+      <td>69.93</td>
+      <td>67.12</td>
+      <td>1.00</td>
+      <td>1.31</td>
+      <td>19.14</td>
+    </tr>
+    <tr>
+      <td>08/17/18</td>
+      <td>1.00</td>
+      <td>0.88</td>
+      <td>0.79</td>
+      <td>110.84</td>
+      <td>6.90</td>
+      <td>70.19</td>
+      <td>67.07</td>
+      <td>0.99</td>
+      <td>1.31</td>
+      <td>19.08</td>
+    </tr>
+    <tr>
+      <td>08/18/18</td>
+      <td>1.00</td>
+      <td>0.88</td>
+      <td>0.79</td>
+      <td>110.39</td>
+      <td>6.88</td>
+      <td>70.16</td>
+      <td>67.44</td>
+      <td>1.00</td>
+      <td>1.31</td>
+      <td>19.12</td>
+    </tr>
+  </tbody>
+</table>
+          <h2 id="label">Bollinger Bands*</h2>
+          <table border="0" class="dataframe" id="bands">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Currency</th>
+      <th>Close</th>
+      <th>30 Day MA</th>
+      <th>Upper Band</th>
+      <th>Lower Band</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>(EUR)</td>
+      <td>0.88</td>
+      <td>0.87</td>
+      <td>0.88</td>
+      <td>0.85</td>
+    </tr>
+    <tr>
+      <td>(GBP)</td>
+      <td>0.79</td>
+      <td>0.77</td>
+      <td>0.79</td>
+      <td>0.76</td>
+    </tr>
+    <tr>
+      <td>(JPY)</td>
+      <td>110.39</td>
+      <td>111.15</td>
+      <td>111.89</td>
+      <td>110.41</td>
+    </tr>
+    <tr>
+      <td>(CNY)</td>
+      <td>6.88</td>
+      <td>6.85</td>
+      <td>6.91</td>
+      <td>6.79</td>
+    </tr>
+    <tr>
+      <td>(INR)</td>
+      <td>70.16</td>
+      <td>69.01</td>
+      <td>70.25</td>
+      <td>67.77</td>
+    </tr>
+    <tr>
+      <td>(RUB)</td>
+      <td>67.44</td>
+      <td>64.94</td>
+      <td>68.98</td>
+      <td>60.91</td>
+    </tr>
+    <tr>
+      <td>(CHF)</td>
+      <td>1.00</td>
+      <td>0.99</td>
+      <td>1.00</td>
+      <td>0.99</td>
+    </tr>
+    <tr>
+      <td>(CAD)</td>
+      <td>1.31</td>
+      <td>1.31</td>
+      <td>1.32</td>
+      <td>1.30</td>
+    </tr>
+    <tr>
+      <td>(MXN)</td>
+      <td>19.12</td>
+      <td>18.78</td>
+      <td>19.25</td>
+      <td>18.30</td>
+    </tr>
+  </tbody>
+</table>
+          <table id="key">
+            <thead>
+              <tr>
+                <th>Symbol</td>
+                <th>Currency</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>(EUR)</td>
+                <td>Euro</td>
+              </tr>
+              <tr>
+                <td>(GBP)</td>
+                <td>British Pound</td>
+              </tr>
+              <tr>
+                <td>(JPY)</td>
+                <td>Japanese Yen</td>
+              </tr>
+              <tr>
+                <td>(CNY)</td>
+                <td>Chinese Yuan</td>
+              </tr>
+              <tr>
+                <td>(INR)</td>
+                <td>Indian Rupee</td>
+              </tr>
+              <tr>
+                <td>(RUB)</td>
+                <td>Russian Ruble</td>
+              </tr>
+              <tr>
+                <td>(CHF)</td>
+                <td>Swiss Franc</td>
+              </tr>
+              <tr>
+                <td>(CAD)</td>
+                <td>Australian Dollar</td>
+              </tr>
+            </tbody>
+          </table>
+          <img id="developed" src="/home/daily_reports/FX/DevelopedEconomiesYTD.png">
+          <img id="emerging" src="/home/daily_reports/FX/EmergingEconomiesYTD.png">
+          <img id="trade-weighted-dollar" src="/home/daily_reports/FX/Trade Weighted Dollar.png">
+          <!--<p id="note">
+            Remeber that these quotes are relative to the dollar, so a currency weakens against the dollar when its spot price increases and strenghens against the dollar when its spot price decreases
+            <br>
+            *developed by famous technical trader John Bollinger; Bollinger Bands are calculated by 
+            taking the 21-day moving average of a security and adding and subtracting two standard deviations from the 
+            average for the upper and lower bound respectively.</p>-->
+      </div>
+    </body>
+        

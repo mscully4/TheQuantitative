@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="NASDAQ.css">
+        <title>NASDAQ 500 Daily Report</title>
+    </head>
+    <body>
+        <div class="background">
+            <h1 class="header">NASDAQ Daily Report</h1>
+            {NASDAQ}
+            <img class="graph" src="NASDAQ.png">
+            <table class="technicals stats" style="width:3.3in;">
+                    <tr>
+                        <th width="60%">52 Week Range</th>
+                        <th width="40%">Volume</th>
+                    </tr>
+                    <tr>
+                        <td width="60%">{technicals[range][0]} - {technicals[range][1]}</td>
+                        <td width="40%">{stats[Volume]}</td>
+                        
+                    </tr>
+            </table>
+            <table class="technicals ratios" style="width:3.3in;">
+                    <tr>
+                        <th>Advances/Declines</th>
+                        <th>Highs/Lows</th>
+                    </tr>
+                    <tr>
+                        <td>{stats[A/D]}</td>
+                        <td>{stats[Highs/Lows]}</td>
+                    </tr>
+            </table>
+            <!--<h1 class="bands">Bollinger Bands</h1>-->
+            <h1 class="faang_text">FAANG Stocks</h1>
+            <table class="faang">
+                    <tbody>
+                        <tr>
+                            <th>Stock</th>
+                            <td>Facebook</td>
+                            <td>Amazon</td>
+                            <td>Apple</td>
+                            <td>Netflix</td>
+                            <td>Google</td>
+                        </tr>
+                        <tr>
+                            <th>Close</th>
+                            <td>{faang[FB][Close]}</td>
+                            <td>{faang[AMZN][Close]}</td>
+                            <td>{faang[AAPL][Close]}</td>
+                            <td>{faang[NFLX][Close]}</td>
+                            <td>{faang[GOOG][Close]}</td>
+                        </tr>
+                        <tr>
+                            <th>Volume</th>
+                            <td>{faang[FB][Volume]}</td>
+                            <td>{faang[AMZN][Volume]}</td>
+                            <td>{faang[AAPL][Volume]}</td>
+                            <td>{faang[NFLX][Volume]}</td>
+                            <td>{faang[GOOG][Volume]}</td>
+                        </tr>
+                        <tr>
+                            <th>7D</th>
+                            <td>{faang[FB][7D]}</td>
+                            <td>{faang[AMZN][7D]}</td>
+                            <td>{faang[AAPL][7D]}</td>
+                            <td>{faang[NFLX][7D]}</td>
+                            <td>{faang[GOOG][7D]}</td>
+                        </tr>
+                        <tr>
+                            <th>30D</th>
+                            <td>{faang[FB][30D]}</td>
+                            <td>{faang[AMZN][30D]}</td>
+                            <td>{faang[AAPL][30D]}</td>
+                            <td>{faang[NFLX][30D]}</td>
+                            <td>{faang[GOOG][30D]}</td>
+                        </tr>
+                        <tr>
+                            <th>90D</th>
+                            <td>{faang[FB][90D]}</td>
+                            <td>{faang[AMZN][90D]}</td>
+                            <td>{faang[AAPL][90D]}</td>
+                            <td>{faang[NFLX][90D]}</td>
+                            <td>{faang[GOOG][90D]}</td>
+                        </tr>
+                        <tr>
+                            <th>YTD</th>
+                            <td>{faang[FB][YTD]}</td>
+                            <td>{faang[AMZN][YTD]}</td>
+                            <td>{faang[AAPL][YTD]}</td>
+                            <td>{faang[NFLX][YTD]}</td>
+                            <td>{faang[GOOG][YTD]}</td>
+                        </tr>
+                        <tr>
+                            <th>1Y</th>
+                            <td>{faang[FB][1Y]}</td>
+                            <td>{faang[AMZN][1Y]}</td>
+                            <td>{faang[AAPL][1Y]}</td>
+                            <td>{faang[NFLX][1Y]}</td>
+                            <td>{faang[GOOG][1Y]}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <h1 class="performance-text">Performance</h1>
+            <table class="performance">
+                <tbody>
+                    <tr>
+                        <th>7 Day</th>
+                        <td>{technicals[7D Chg]}</td>
+                    </tr>
+                    <tr>
+                        <th>30 Day</th>
+                        <td>{technicals[30D Chg]}</td>
+                    </tr>
+                    <tr>
+                        <th>90 Day</th>
+                        <td>{technicals[90D Chg]}</td>
+                    </tr>
+                    <tr>
+                        <th>YTD Day</th>
+                        <td>{technicals[YTD Chg]}</td>
+                    </tr>
+                    <tr>
+                        <th>1 Year</th>
+                        <td>{technicals[1Y Chg]}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="movers-text">NASDAQ 100 Biggest Gainers and Losers</h1>
+            {gainers}
+            {losers}  
+        </div>
+    </body>
+</html>

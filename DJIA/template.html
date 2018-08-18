@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dow Jones Industrial Average Report</title>
+        <link rel="stylesheet" href="/home/daily_reports/DJIA/DJIA.css" type="text/css">
+        <style>
+</style>
+    </head>
+    <body>
+        <div class="background">
+            <h1 class="header">Dow Jones Industrial Average Report</h1>
+            <img class="graph" src="/home/daily_reports/DJIA/DowJonesIndustrialAverage.png">
+            {DJIA}
+            {winners}
+            {losers}
+            <h1 class="components-text" id="winners-text">DJIA Biggest Gainers</h1>
+            <h1 class="components-text" id="losers-text">DJIA Biggest Losers</h1>
+            <table class="change">
+                <thead>
+                    <tr>
+                        <th>7 Day</th>
+                        <th>30 Day</th>
+                        <th>90 Day</th>
+			<th>YTD</th>
+			<th>1 Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{performance[7D]}</td>
+                        <td>{performance[30D]}</td>
+                        <td>{performance[90D]}</td>
+			            <td>{performance[YTD]}</td>
+                        <td>{performance[1Y]}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="technicals-text" id="MA">Moving Averages</h1>
+            <table class="moving-averages">
+                <tbody>
+                    <tr>
+                        <th>50 Day MA</th>
+                        <td>{MA[0]}</td>
+                    </tr>
+                    <tr>
+                        <th>100 Day MA</th>
+                        <td>{MA[1]}</td>
+                    </tr>
+                    <tr>
+                        <th>200 Day MA</th>
+                        <td>{MA[2]}</td>
+                    </tr>
+                    <tr>
+                        <th>50 Day EWMA</th>
+                        <td>{MA[3]}</td>
+                    </tr>
+                    <tr>
+                        <th>100 Day EWMA</th>
+                        <td>{MA[4]}</td>
+                    </tr>
+                    <tr>
+                        <th>200 Day EWMA</th>
+                        <td>{MA[5]}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="technicals-text" id="BB">Bollinger Bands</h1>
+            <table class="bollinger-bands">
+                <tbody>
+                    <tr>
+                        <th>DJIA</th>
+                        <td>{BB[0]}</td>
+                    </tr>
+                    <tr>
+                        <th>1M MA</th>
+                        <td>{BB[1]}</td>
+                    </tr>
+                    <tr>
+                        <th>1M STD</th>
+                        <td>{BB[2]}</td>
+                    </tr>
+                    <tr>
+                        <th>Lower Bound</th>
+                        <td>{BB[4]}</td>
+                    </tr>
+                    <tr>
+                        <th>Upper Bound</th>
+                        <td>{BB[3]}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

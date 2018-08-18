@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'Copperplate Gothic Regular';
+    src: url('Copperplate Gothic Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Old Standard TT';
+    src: url('OldStandard-Regular.ttf');
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 8.5in;
+    height: 11in;
+    margin: auto;
+    background: url('CircuitBoard1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background {
+    width: 8.5in;
+    height: 11in;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+}
+
+
+.header {
+    color: black;
+    border: solid 3px black;
+    font-family: "Copperplate Gothic Regular", sans-serif;
+    position: absolute;
+    width: 7.5in;
+    left: .35in;
+    top: .1in;
+    text-align: center;
+    margin: 0;
+    background-color: rgba(0, 159, 197, .7);
+}
+
+#NASDAQ {
+    color: #000;
+    width: 3.1in;
+    font-family: 'Old Standard TT', sans-serif;
+    font-size: 19px;
+    text-align: center;
+    position: absolute;
+    top: .6in;
+    left: .1in;
+    border-spacing: 0;
+    border: solid 3px black;
+}
+
+#NASDAQ thead tr th {
+    background-color: rgba(0, 159, 197, .7);
+    border-spacing: 0;
+}
+
+.graph {
+    position: absolute;
+    width: 5.05in;
+    height: 3.7in;
+    opacity: .9;
+    border: solid 3px black;
+    top: .6in;
+    right: .1in;
+    box-sizing: border-box;
+}
+
+.technicals {
+    text-align: center;
+    width: 3.2in;
+    font-family: 'Old Standard TT', sans-serif;
+    font-size: 16px;
+    position: absolute;
+    border: solid 3px black;
+    border-spacing: 0;
+}
+
+.technicals tr th {
+    background-color: rgba(0, 159, 197, .7);
+}
+
+.stats {
+    top: 4in;
+    left: 0.05in;
+}
+
+.ratios {
+    top: 4.6in;
+    left: 0.05in;
+}
+
+.faang_text {
+    position: absolute;
+    top: 4.8in;
+    right: 1.9in;
+    border: solid 3px black;
+    background-color: rgba(0, 159, 197, .7);
+    font-family: 'Old Standard TT';
+    font-size: 24px;
+}
+
+.faang {
+    position: absolute;
+    text-align: center;
+    width: 5.5in;
+    font-family: 'Old Standard TT', 'sans-serif';
+    font-size: 16px;
+    position: absolute;
+    border: solid 3px black;
+    top: 5.25in;
+    right: 0.1in;
+    border-spacing: 0;
+}
+
+.faang tbody tr th {
+    background-color: rgba(0, 159, 197, .7);
+    border-spacing: 0;
+}
+
+.faang tbody tr td:nth-child(even) {
+    background-color: rgba(256, 256, 256, .6);
+}
+
+.faang tbody tr td:nth-child(odd) {
+    background-color: rgba(162, 214, 228, .7);
+}
+
+.performance-text {
+    position: absolute;
+    left: .7in;
+    top: 5.4in;
+    text-align: center;
+    font-family: 'Old Standard TT', monospace;
+    border: solid 3px black;
+    background-color: rgba(0, 159, 197, .7);
+    font-size: 24px;
+}
+
+.performance {
+    text-align: center;
+    width: 2in;
+    font-family: 'Old Standard TT', 'sans-serif';
+    font-size: 16px;
+    position: absolute;
+    border: solid 3px black;
+    top: 5.9in;
+    left: .425in;
+}
+
+#BB {
+    text-align: center;
+    width: 4.15in;
+    font-family: 'Old Standard TT', 'sans-serif';
+    font-size: 16px;
+    position: absolute;
+    border: solid 3px black;
+    top: 4.85in;
+    right: 0in;
+}
+
+.movers {
+    color: #000;
+    font-family: 'Old Standard TT', sans-serif;
+    text-align: center;
+    position: absolute;
+    border: solid 3px black;
+    height: 2.75in;
+    width: 4.15in;
+    font-size: 16px;
+    border-spacing: 0;
+}
+
+.movers tbody tr td:nth-child(1) {
+    text-align: left;
+}
+
+.movers thead tr th {
+    background-color: rgba(0, 159, 197, .7);
+    border-bottom: solid 3px black;
+}
+
+.movers tbody tr td:nth-child(even) {
+    background-color: rgba(256, 256, 256, .6);
+    border-left: solid 3px black;
+}
+
+.movers tbody tr td:nth-child(odd) {
+    background-color: rgba(162, 214, 228, 0.815);
+    
+}
+
+.movers-text {
+    position: absolute;
+    left: 1.8in;
+    top: 7.6in;
+    font-family: 'Old Standard TT', sans-serif;
+    border: solid 3px black;
+    background-color: rgba(0, 159, 197, .7);
+    font-size: 24px;
+
+}
+
+#active {
+    bottom: 2.95in;
+    left: .05in;
+}
+
+#gainers {
+    bottom: .1in;
+    left: .05in;
+}
+
+#losers {
+    bottom: .1in;
+    right: 0in;
+}
+
+th {
+    text-align: center;
+}
+table {
+    border-spacing: 0;
+}
+
+.movers tbody tr td:nth-child(1) {
+    text-align: left;
+}
+
+.movers thead tr th, .technicals thead tr th, #NASDAQ thead tr th {
+    background-color: rgba(0, 159, 197, .7);
+    border-bottom: solid 3px black;
+}
+
+.technicals tbody tr td:nth-child(2), #NASDAQ tbody tr td:nth-child(2) {
+    background-color: rgba(256, 256, 256, .6);
+    border-left: solid 3px black;
+}
+
+.movers tbody tr td:nth-child(odd), .technicals tbody tr td:nth-child(odd), #NASDAQ tbody tr td:nth-child(odd) {
+    background-color: rgba(162, 214, 228, 0.815);
+    border-left: solid 3px black;
+}
+
+.movers tbody tr td:nth-child(1), .technicals tbody tr td:nth-child(1), #NASDAQ tbody tr td:nth-child(1) {
+    border-left: none;
+}
+
+.performance tbody tr th, .faang tbody tr th {
+    background-color: rgba(0, 159, 197, .7);
+    border-right: solid 3px black;
+}
+
+.faang tbody tr:nth-child(even) td, .performance tbody tr:nth-child(even) td {
+    background-color: rgba(256, 256, 256, .6);
+    border-bottom: solid 3px black;
+}
+
+.faang tbody tr:nth-child(odd) td, .performance tbody tr:nth-child(odd) td {
+    background-color: rgba(162, 214, 228, 0.815);
+    border-bottom: solid 3px black;
+}
