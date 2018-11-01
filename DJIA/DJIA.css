@@ -13,9 +13,8 @@ html {
     height: 11in;
     margin: auto;
     background: url("/home/daily_reports/DJIA/background.jpg");
-    background-size: 8.5in 11in;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    border: solid 2px black;
 }
 
 .background {
@@ -230,22 +229,22 @@ html {
 }
 
 #winners {
-    top: 5.45in;
+    top: 5.4in;
     left: .1in;
 }
 
 #losers {
-    top: 8.4in;
+    top: 8.35in;
     left: .1in;
 }
 
 #winners-text {
-    top: 5.05in;
+    top: 5in;
     left: .7in;
 }
 
 #losers-text {
-    top: 8in;
+    top: 7.95in;
     left: .7in;
 }
 

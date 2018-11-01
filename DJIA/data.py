@@ -38,6 +38,7 @@ def components():
         for x, element in enumerate(td):
             df.loc[i, header[x]] = element.text
     companies = [name.split(u'\xa0', 1)[1] for name in list(df['Company'])]
+    companies = [company[:15] if len(company) > 15 else company for company in companies]
     tickers = [name.split(u'\xa0', 1)[0] for name in list(df['Company'])]
     change = [float(x.strip('+')) for x in list(df['Change'])]
     per_change = [float(x.strip('+').strip('%')) for x in list(df['% Change'])]
@@ -48,7 +49,6 @@ def components():
     w = weights()
     for i in range(30):
         df.loc[i, 'Weight'] = w[i][1]
-    df.loc[24, "Company"] = "Travelers Inc."
     df.rename(columns={'YTDchange': 'YTD Change'}, inplace=True)
     df = df.sort_values('% Change', ascending=False)
     df = df.drop('Volume', axis=1)

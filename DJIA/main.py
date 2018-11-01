@@ -9,6 +9,7 @@ import os
 
 os.chdir('/home/daily_reports/DJIA/')
 
+print('EXECUTING ./DJIA/main.py')
 start = time.time()
 
 df = data.DJIA()
@@ -18,7 +19,7 @@ fig1 = plot.DowJonesIndustrialAverageWBollingerBands(df)
 df_MA = technicals.moving_averages(df)
 df_BB = technicals.bollinger_bands(df)
 render.render(performance, df_MA, df_BB)
-distribute.to_pdf('/home/daily_reports/DJIA/index.html')
+distribute.to_pdf('index.html', 'DailyDJIAReport.pdf')
 #distribute.send('/home/daily_reports/DJIA/DJIA Daily Report.pdf')
 
 print(time.time() - start)
