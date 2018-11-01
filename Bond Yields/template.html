@@ -2,7 +2,7 @@
 <html>
     <head>
       <title>Daily Treasury Yield Report</title>
-      <link rel="stylesheet" href="/home/daily_reports/Bond Yields/style.css" type="text/css">
+      <link rel="stylesheet" href="/home/daily_reports/Bond Yields/Yields.css" type="text/css">
     </head>
     <body>
       <div class="background">
@@ -22,21 +22,21 @@
               </tr>
             </thead>
               <tr>
-                <td>{MA50}</td>
-                <td>{MA100}</td>
-                <td>{MA200}</td>
-                <td>{EWMA50}</td>
-                <td>{EWMA100}</td>
-                <td>{EWMA200}</td>
-                <td>{Breakeven}</td>
-                <td>{Spread}</td>
+                <td>{moving_averages[0]}</td>
+                <td>{moving_averages[1]}</td>
+                <td>{moving_averages[2]}</td>
+                <td>{moving_averages[3]}</td>
+                <td>{moving_averages[4]}</td>
+                <td>{moving_averages[5]}</td>
+                <td>{breakeven}</td>
+                <td>{spread}</td>
               </tr>
             </thead>
           </table>
-          <img id="YearAgo" src="/home/daily_reports/Bond Yields/YearAgo.jpg">
-          <img id="MovingAverages" src="/home/daily_reports/Bond Yields/MovingAverages.jpg">
-          <img id="Breakeven" src="/home/daily_reports/Bond Yields/Breakeven Rate.jpg">
-          <img id="YieldSpreads" src="/home/daily_reports/Bond Yields/YieldSpreads.jpg">
+          <img id="YearAgo" src="/home/daily_reports/Bond Yields/YearAgo.png">
+          <img id="MovingAverages" src="/home/daily_reports/Bond Yields/MovingAverages.png">
+          <img id="Breakeven" src="/home/daily_reports/Bond Yields/Breakeven Rate.png">
+          <img id="YieldSpreads" src="/home/daily_reports/Bond Yields/YieldSpreads.png">
       </div>
     </body>
         

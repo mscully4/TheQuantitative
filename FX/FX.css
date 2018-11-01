@@ -5,10 +5,10 @@
 
 
 html {
-    width: 11in;
-    height: 14.2in;
+    width: 8.5in;
+    height: 11in;
     margin: auto;
-    background: url("/home/daily_reports/FX/world-currencies.png");
+    background: url("/home/daily_reports/FX/background.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -27,7 +27,7 @@ html {
     font-family: "Copperplate Gothic Regular", sans-serif;
     position: absolute;
     width: 6in;
-    left: 2in;
+    left: 1.25in;
     top: .1in;
     text-align: center;
     background-color: rgba(174, 126, 153, .6);
@@ -36,16 +36,15 @@ html {
 
 #timeseries {
     color: #000;
-    width: 10in;
+    width: 8.25in;
     font-family: 'Old Standard TT', sans-serif;
     font-size: 20px;
     text-align: center;
     position: absolute;
     top: .60in;
-    left: .25in;
-    border-spacing: 0 .0in;
+    left: .05in;
+    border-spacing: 0;
     border: solid 3px black;
-    font-weight: bold
 }
 
 .dataframe th {
@@ -63,40 +62,41 @@ html {
 }
 
 
-.dataframe tbody tr:last-child td{
+#timeseries tbody tr:last-child td{
     border-top: solid 3px black;
 }
 
 img {
     position: absolute;
     border: solid 3px black;
-    height: 4.25in;
-    width: 6.1in;
+    height: 3.5in;
+    width: 4.75in;
     opacity: .8;
 }
 
 #developed {
-    top: 4in;
-    left: .125in;
+    top: 3.8in;
+    left: 0in;
 }
 
 #emerging {
-    top: 8.5in;
-    left: .125in;
+    bottom: .05in;
+    left: 0in;
 }
 
 #trade-weighted-dollar {
     position: absolute;
     border: solid 3px black;
-    height: 3.5in;
-    width: 4.375in;
+    height: 2.7in;
+    width: 3.4in;
     opacity: .8;
-    top: 7.85in;
-    left: 6.4in;
+    top: 6.1in;
+    right: 0.15in;
 }
 
-#label {
-    top: 4in;
+#bands-text {
+    top: 3.8in;
+    display: none;
     color: black;
     border: solid 3px black;
     font-family: "Copperplate Gothic Light", sans-serif;
@@ -110,31 +110,30 @@ img {
 
 #bands {
     color: #000;
-    width: 4in;
+    width: 2.5in;
     font-family: 'Old Standard TT', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     position: absolute;
-    border-spacing: 0 .0in;
+    border-spacing: 0in;
     border: solid 3px black;
-    font-weight: bold;
-    left: 6.4in;
-    top: 4.4in
+    left: 4.95in;
+    top: 3.75in
 }
 
 #key {
     color: #000;
-    width: 4in;
+    width: 3in;
     font-family: 'Old Standard TT', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     position: absolute;
-    border-spacing: 0 .0in;
+    border-spacing: 0;
     border: solid 3px black;
-    font-weight: bold;
-    left: 6.6in;
-    bottom: .125in;
+    right: .3in;
+    bottom: .05in;
     text-align: center;
+    height: 1.4in;
     /*background-color: rgba(174, 126, 153, .6);*/
 }
 

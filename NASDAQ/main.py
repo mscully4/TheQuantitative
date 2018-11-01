@@ -10,7 +10,6 @@ os.chdir('/home/daily_reports/NASDAQ/')
 start = time.time()
 
 df = data.NASDAQCOM()
-print(df.tail())
 gainers, losers = data.movers()
 stats = data.daily_stats()
 faang = data.faang()

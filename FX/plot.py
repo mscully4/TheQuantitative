@@ -29,7 +29,7 @@ def plot_developed_currencies(df):
     df = df.tail(len(df) - year_ago(df))
     dates = np.array(df['Date'])
     original = np.array(df.loc[df.index[0]][1:])
-    price_change = df.drop(df.columns[0], axis=1).diff().cumsum()
+    price_change = df.drop(['Date'], axis=1).diff().cumsum()
     percent_change = (price_change / original)
     plt.plot(dates, percent_change['(EUR)'], color='b')
     plt.plot(dates, percent_change['(GBP)'], color='r')
@@ -41,7 +41,7 @@ def plot_developed_currencies(df):
     plt.legend(['Euro', 'Pound', 'Yen'])
     plt.gca().grid(True)
     plt.gca().set_facecolor('#E2DED6')
-    plt.subplots_adjust(top=0.93, bottom=0.06, left=0.12,
+    plt.subplots_adjust(top=0.93, bottom=0.06, left=0.13,
                         right=0.96, hspace=0.2, wspace=0.2)
     plt.savefig('DevelopedEconomiesYTD.png')
     return fig
@@ -53,7 +53,7 @@ def plot_emerging_currencies(df):
     df = df.tail(len(df) - year_ago(df))
     dates = np.array(df['Date'])
     original = np.array(df.loc[df.index[0]][1:])
-    price_change = df.drop(df.columns[0], axis=1).diff().cumsum()
+    price_change = df.drop(['Date'], axis=1).diff().cumsum()
     percent_change = (price_change / original)
     plt.plot(dates, percent_change['(CNY)'], color='r')
     plt.plot(dates, percent_change['(INR)'], color='#fac205')

@@ -78,7 +78,7 @@ def big_movers():
     tables = soup.findAll('table')
     active, gainers, losers = tables[0].findAll('tr'), tables[1].findAll('tr'), tables[2].findAll('tr')
     columns = ["Ticker", "Stock", "Price", "Change", "% Change"]
-    r = re.compile(r'\bInc\b | \bCo\b | \bCorp\b', flags=re.I | re.X)
+    r = re.compile(r'\bInc\b | \bCo\b | \bCorp\b | \bPLC\b', flags=re.I | re.X)
     df1 = pd.DataFrame(columns=columns)
     for z, stock in enumerate(active[1:]):
         d = stock.findAll('td')
@@ -87,10 +87,13 @@ def big_movers():
             if i == 0:
                 df1.loc[z, columns[i + 1]] = d[i].text.split(" ", 1)[1]
                 name = d[i].text.split(" ", 1)[1]
-                for suffix in r.findall(name.split(" ", 1)[1]):
-                    name = re.sub(suffix, '', name)
-                    if len(name) > 21:
-                        name = name[:21]
+                try:
+                    for suffix in r.findall(name.split(" ", 1)[1]):
+                        name = re.sub(suffix, '', name)
+                except IndexError:
+                    pass
+                if len(name) > 24:
+                    name = name[:24]
                 df1.loc[z, columns[i + 1]] = name
             else:
                 df1.loc[z, columns[i + 1]] = d[i].text
@@ -102,10 +105,14 @@ def big_movers():
             if i == 0:
                 df2.loc[z, columns[i + 1]] = d[i].text.split(" ", 1)[1]
                 name = d[i].text.split(" ", 1)[1]
-                for suffix in r.findall(name.split(" ", 1)[1]):
-                    name = re.sub(suffix, '', name)
-                    if len(name) > 21:
-                        name = name[:21]
+                try:
+                    for suffix in r.findall(name.split(" ", 1)[1]):
+                        name = re.sub(suffix, '', name)
+                except IndexError:
+                    pass
+                if len(name) > 24:
+                    name = name[:24]
+                    print(name)
                 df2.loc[z, columns[i + 1]] = name
             else:
                 df2.loc[z, columns[i + 1]] = d[i].text
@@ -119,8 +126,8 @@ def big_movers():
                 name = d[i].text.split(" ", 1)[1]
                 for suffix in r.findall(name.split(" ", 1)[1]):
                     name = re.sub(suffix, '', name)
-                    if len(name) > 21:
-                        name = name[:21]
+                if len(name) > 24:
+                    name = name[:24]
                 df3.loc[z, columns[i + 1]] = name
             else:
                 df3.loc[z, columns[i + 1]] = d[i].text

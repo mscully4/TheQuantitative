@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-import refresh_nominal, refresh_real, moving_averages, plot, render, distribute
+import moving_averages, plot, render, distribute, data
 import pandas as pd
 import matplotlib.pyplot as plt
 import time
@@ -11,20 +11,24 @@ os.chdir('/home/daily_reports/Bond Yields/')
 
 start = time.time()
 
-refresh_nominal.refresh()
-refresh_real.refresh()
-data = 'data.csv'
-df = pd.read_csv(data, parse_dates=['Date'], dtype=float)
-df_MA = moving_averages.moving_averages(df)
-df_real = pd.read_csv('dataR.csv', parse_dates=['DATE'], dtype=float)
-fig1 = plot.yield_curve(df)
-fig2 = plot.yield_spread(df)
-fig3 = plot.moving_averages(df, df_MA)
-fig4 = plot.exponential_moving_averages(df, df_MA)
-fig5 = plot.breakeven_rate(df, df_real)
-moving_averages = tuple([float(df.loc[len(df) - 1, x]) for x in df.columns[12:18]])
-render.render(df, df_real, df_MA, 'template.html', 'index.html')
-distribute.to_pdf('index.html')
-#distribute.send('DailyTreasuryYieldReport.pdf')
+yields = data.yields()
+DGS10 = data.DGS10()
+T10YIE = data.T10YIE()
+T10Y2Y = data.T10Y2Y()
+year_ago = data.year_ago(yields)
+#refresh_nominal.refresh()
+#refresh_real.refresh()
+#data = 'data.csv'
+#df = pd.read_csv(data, parse_dates=['Date'], dtype=float)
+df_MA = moving_averages.moving_averages(DGS10)
+#df_real = pd.read_csv('dataR.csv', parse_dates=['DATE'], dtype=float)
+fig1 = plot.yield_curve(yields, year_ago)
+fig2 = plot.yield_spread(T10Y2Y)
+fig3 = plot.moving_averages(df_MA)
+#fig4 = plot.exponential_moving_averages(df, df_MA)
+fig5 = plot.breakeven_rate(T10YIE)
+moving_averages = list(df_MA.iloc[-1])[2:]
+render.render(yields, DGS10, T10Y2Y, T10YIE, moving_averages)
+distribute.to_pdf('index.html', 'DailyTreasuryYieldReport.pdf')
     
 print(time.time() - start)

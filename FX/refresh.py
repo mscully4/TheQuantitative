@@ -30,7 +30,7 @@ def refresh():
         except fx.RatesNotAvailableError:
             pass
 
-    df.to_csv('FX.csv', index=None, float_format='%g')
+    df.to_csv('FX.csv', index=False, float_format='%g')
     
 
 
