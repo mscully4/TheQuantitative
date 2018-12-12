@@ -3,7 +3,7 @@ from PyPDF2 import PdfFileMerger, PdfFileReader
 def merge():
     print('MERGING...')
     BASE_DIR = '/home/daily_reports/'
-    pdfs = ('SP500/DailySP500Report.pdf','NASDAQ/DailyNASDAQReport.pdf','DJIA/DailyDJIAReport.pdf','Bond Yields/DailyTreasuryYieldReport.pdf','FX/DailyForeignExchangeReport.pdf')
+    pdfs = ('SP500/DailySP500Report.pdf','NASDAQ/DailyNASDAQReport.pdf','DJIA/DailyDJIAReport.pdf','BondYields/DailyTreasuryYieldReport.pdf','FX/DailyForeignExchangeReport.pdf')
 
     merger = PdfFileMerger()
 

@@ -7,13 +7,17 @@ from email.mime.application import MIMEApplication
 from os.path import basename
 import os
 import os.path
+import configparser as cp
 
 os.chdir('/home/daily_reports/PDFs/')
 
+config = cp.ConfigParser()
+config.read("config.ini")
+
 def send(filename):
     print('SENDING...')
-    fromaddr = "michael.scully1997@gmail.com"
-    toaddrs = 'mscully4@nd.edu, michael.scully@citi.com'
+    fromaddr = config.get('Email', 'address')
+    toaddrs = 'mscully4@nd.edu'
     msg = MIMEMultipart()
     msg['From'] = fromaddr
     msg['To'] = toaddrs
@@ -28,7 +32,7 @@ def send(filename):
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(fromaddr, "AFarewellToArms&*90")
+    server.login(fromaddr, config.get('Email', 'password'))
     text = msg.as_string()
     server.sendmail(fromaddr, toaddrs, text)
     print('...')

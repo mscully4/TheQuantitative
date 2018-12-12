@@ -1,6 +1,5 @@
 import pdfkit
 from os.path import basename
-from PyPDF2 import PdfFileWriter, PdfFileReader
 import os
 
 def to_pdf(filename):

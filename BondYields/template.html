@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Daily Treasury Yield Report</title>
+      <link rel="stylesheet" href="/home/daily_reports/BondYields/Yields.css" type="text/css">
+    </head>
+    <body>
+      <div class="background">
+          <h1 class="header">Daily Treasury Yield Report</h1>
+          {dataframe}
+          <table class="technicals">
+            <thead>
+              <tr>
+                <th>50 Day MA</th>
+                <th>100 Day MA</th>
+                <th>200 Day MA</th>
+                <th>50 Day EWMA</th>
+                <th>100 Day EWMA</th>
+                <th>200 Day EWMA</th>
+                <th>10YR Breakeven Rate</th>
+                <th>10YR - 2YR Spread</th>
+              </tr>
+            </thead>
+              <tr>
+                <td>{moving_averages[0]}</td>
+                <td>{moving_averages[1]}</td>
+                <td>{moving_averages[2]}</td>
+                <td>{moving_averages[3]}</td>
+                <td>{moving_averages[4]}</td>
+                <td>{moving_averages[5]}</td>
+                <td>{breakeven}</td>
+                <td>{spread}</td>
+              </tr>
+            </thead>
+          </table>
+          <img id="YearAgo" src="/home/daily_reports/BondYields/YearAgo.png">
+          <img id="MovingAverages" src="/home/daily_reports/BondYields/MovingAverages.png">
+          <img id="Breakeven" src="/home/daily_reports/BondYields/Breakeven Rate.png">
+          <img id="YieldSpreads" src="/home/daily_reports/BondYields/YieldSpreads.png">
+      </div>
+    </body>
+        

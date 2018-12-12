@@ -124,10 +124,13 @@ def big_movers():
             if i == 0:
                 df3.loc[z, columns[i + 1]] = d[i].text.split(" ", 1)[1]
                 name = d[i].text.split(" ", 1)[1]
-                for suffix in r.findall(name.split(" ", 1)[1]):
-                    name = re.sub(suffix, '', name)
+                try:
+                    for suffix in r.findall(name.split(" ", 1)[1]):
+                        name = re.sub(suffix, '', name)
+                except IndexError:
+                    pass
                 if len(name) > 24:
-                    name = name[:24]
+                        name = name[:24]
                 df3.loc[z, columns[i + 1]] = name
             else:
                 df3.loc[z, columns[i + 1]] = d[i].text
